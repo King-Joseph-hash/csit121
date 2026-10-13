@@ -1,0 +1,32 @@
+body{
+    background-color: blue;
+}
+
+#primary-header{
+    color: rgb(171, 8, 171);
+}
+
+.lists{
+    border: 3px dashed black;
+}
+
+a{
+    color: white;
+   
+}
+
+a:hover{
+    color: orange;
+}
+
+h2{
+    color:white;
+}
+
+h3{
+    color: red;
+}
+
+p{
+    color: black;
+}
