@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline / Block</title>
+    <style>
+        body {
+            background-color: rgb(243, 245, 211);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        p {
+            border: 2px solid black;
+            line-height: 1.5em;
+            width: ; /* add 200 px here */
+        }
+
+        /* Inline elements will not respond to height/width properties. Try adding one or other and observe. */
+        a {
+            border: 2px solid black;
+            padding: 5px;
+        }
+
+        div {
+            margin: 50px;
+        }
+
+        div p {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Paragraph tags are <b>block-level</b> elements. Block-level elements leave a blank line above and below and its
+        'area' extends to its parent's margins. </p>
+
+    <p>In this case, the parent is <b>&lt;body&gt;</b> and there are no
+        explicit margins defined, so it defaults to the full width of the viewport. Try adding and changing the margin
+        property.</p>
+
+    <div>
+        <p>This block of text's parent is <b>&lt;div&gt;</b>. </p>
+        <p>Anchor tags are <b>inline elements</b> - they appear on the same line when there is sufficient room. </p>
+
+        <p>The configured border makes it easy to see how much space each anchor tag uses.</p>
+
+        <a href="https://w3schools.com">W3Schools.com</a>
+
+        <a href="https://www.w3schools.com/html/html_blocks.asp/">W3Schools Tutorial - Block and Inline Elements</a>
+    </div>
+</body>
+
+</html>

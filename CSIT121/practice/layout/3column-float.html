@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Column Layout with Float</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        #wrapper {
+            width: 90%;
+            margin: 20px auto;
+            background: white;
+            padding: 10px;
+            overflow: hidden;
+            /* Clearfix */
+        }
+
+        header,
+        footer {
+            background: #498fbe;
+            color: white;
+            text-align: center;
+            padding: 15px;
+
+        }
+
+        nav {
+            width: 20%;
+            float: left;
+            background: lightgray;
+            padding: 20px;
+            min-height: 100%;
+        }
+
+        main {
+            width: 55%;
+            float: left;
+            background: white;
+            padding: 20px;
+        }
+
+        aside {
+            min-height: 100%;
+            width: 25%;
+            float: left;
+            background: lightblue;
+            padding: 20px;
+        }
+
+
+        a:link {
+            color: #498fbe;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #000000;
+        }
+
+        a:hover {
+            color: #0b8d3f;
+            text-decoration: underline;
+        }
+
+        /* Clearfix to prevent layout issues
+        When you float elements in CSS (using float: left; or float: right;), they’re taken out of the normal document flow. 
+        That means their parent container can “collapse” — its height becomes zero because, technically, the floated 
+        children don’t occupy space in it anymore.
+        ::after creates a pseudo-element that acts like an invisible element inserted after the container’s content.
+
+        content: "" ensures the pseudo-element actually exists (even though it’s empty).
+
+        display: table makes the pseudo-element behave like a block-level element that can clear floats reliably (other values 
+        like block also work, but table is a bit more robust in older browsers).
+
+        clear: both forces the pseudo-element to sit below any floated elements inside the container, effectively stretching 
+        the container to wrap around its floated children. */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <header>
+            <h1>Three Column Layout (Float)</h1>
+        </header>
+
+        <div class="clearfix">
+            <nav>
+                <h2>Nav</h2>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </nav>
+
+            <main>
+                <h2>Main Content</h2>
+                <p>This is the main content area. This is the main content area. This is the main content area. This is
+                    the main content area. This is the main content area. This is the main content area. This is the
+                    main content area. This is the main content area. This is the main content area. This is the main
+                    content area. This is the main content area. </p>
+            </main>
+
+            <aside>
+                <h2>Aside</h2>
+                <p>This is the sidebar content.</p>
+            </aside>
+        </div>
+
+        <footer>
+            <p>Copyright &copy; 2025</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
