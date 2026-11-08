@@ -1,0 +1,131 @@
+/* Lab 06 responsive layout. Written with help from Claude (AI), based on my CSIT 121
+   module notes (flexbox and media queries) and the Lab 5 video. */
+
+/* border-box: width includes padding and border, so sizes stay predictable */
+* {
+    box-sizing: border-box;
+}
+
+/* ---------- MOBILE FIRST (single column, no media query needed) ---------- */
+
+body {
+    background-color: blue;
+    font-family: Verdana, Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Container that keeps the page contained instead of stretching edge to edge */
+#wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+#primary-header {
+    color: rgb(171, 8, 171);
+    margin-top: 0;
+}
+
+/* Navigation: stacked links on mobile, each one easy to tap */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 0.5em;
+}
+
+nav a {
+    display: block;
+    background-color: #0b1f5c;
+    color: white;
+    padding: 0.75em;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+/* Flex container: article children stack in one column on mobile */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+}
+
+article {
+    background-color: white;
+    padding: 1em;
+    margin: 0.5em;
+}
+
+.lists {
+    border: 3px dashed black;
+}
+
+article a {
+    color: #0a3fa8;
+}
+
+article a:hover {
+    color: #b34700;
+}
+
+h2 {
+    color: #0b1f5c;
+}
+
+h3 {
+    color: #c00000;
+}
+
+p {
+    color: black;
+}
+
+footer {
+    text-align: center;
+    padding: 0.5em;
+}
+
+footer p {
+    color: white;
+}
+
+/* ---------- DESKTOP (1024px and wider) ---------- */
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 110%;
+    }
+
+    /* Nav links go side by side in a row */
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    nav li {
+        flex: 1;
+        margin: 0 0.25em;
+    }
+
+    /* Posts sit next to each other in columns */
+    main {
+        flex-direction: row;
+    }
+
+    article {
+        flex: 1;
+    }
+}

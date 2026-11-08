@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Inline and Inline-Block</title>
+    <style>
+    body {
+        font-family: sans-serif;
+    }
+    
+    div {
+        background: #f0f0f0;
+        padding: 20px;
+    }
+
+    .box {
+        background: #3498db;
+        color: white;
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+        /* Ignored by inline */
+        margin-top: 50px;
+        border: 2px solid #2980b9;
+    }
+
+    .inline {
+        display: inline;
+    }
+
+    .block {
+        display: block;
+    }
+
+    .inline-block {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    p {
+        background-color: bisque;
+    }
+</style>
+
+</head>
+<body>
+   <h1>Block / Inline / Inline-Block</h1>
+<div>
+    <p>This is some placeholder text. <span class="box inline">Inline</span>This is some placeholder text. This is some
+        placeholder text. This is some placeholder text. This is some placeholder text. This is some placeholder
+        text.This is some placeholder text.
+        This is some placeholder text. This is some placeholder text.This is some placeholder text. This is some
+        placeholder text. This is some placeholder text.This is some placeholder text. This is some placeholder text.
+This is some placeholder text.</p>
+
+    <p>This is some placeholder text. <span class="box block">Inline</span>This is some placeholder text. This is some
+        placeholder text. This is some placeholder text. This is some placeholder text. This is some placeholder
+        text.This is some placeholder text.
+        This is some placeholder text. This is some placeholder text.This is some placeholder text. This is some
+        placeholder text. This is some placeholder text.This is some placeholder text. This is some placeholder text.
+        This is some placeholder text.</p>
+
+    <p>This is some placeholder text. <span class="box inline-block">Inline</span>This is some placeholder text. This is
+        some placeholder text. This is some placeholder text. This is some placeholder text. This is some placeholder
+        text.This is some placeholder text.
+        This is some placeholder text. This is some placeholder text.This is some placeholder text. This is some
+        placeholder text. This is some placeholder text.This is some placeholder text. This is some placeholder text.
+        This is some placeholder text.</p>
+
+</div>
+
+<main>
+
+    <ol>
+        <li>
+            <b>The Margin & Padding "Ghost"</b><br>
+
+            If you look at the inline element, you'll see it refuses to grow to 100px tall. Even though we gave it a
+            margin-top, it
+            stays glued to the top of its line.
+
+            The inline-block element, however, happily pushes down from the top because it treats the margin and height
+            as real
+            physical space.</li>
+        <li>
+            <b>Alignment problems</b><br>
+
+            Centering: Because inline-block acts like text, the text-align: center on the parent container moves it to
+            the middle of
+            the screen. A block element would ignore that and stay left-aligned unless you used margin: 0 auto;.
+
+            Vertical Alignment: inline-block allows you to use the vertical-align property (e.g., top, middle, bottom).
+            This is
+            incredibly useful when you have a small icon next to a large piece of text and want them to line up
+            perfectly.
+        </li>
+        <li>
+            <b>The New Line Rule</b><br>
+
+            The block element is a "selfish" one. It forces a line break before and after itself, spanning the full
+            width of the
+            container. inline-block is "social" It only takes up as much space as it needs and lets others sit next to
+            it.
+
+        </li>
+    </ol>
+</main> 
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Web Design</title>
+    <style>
+        /* General styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Geneva, Tahoma, sans-serif;
+            background-color: #dcdcdd;
+            
+        }
+
+        /* Header */
+        header {
+            background: #498fbe;
+            color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 10px #000000;
+        }
+
+        /* Main Content */
+        main {
+            display: flex;
+            /* define the container for flex items */
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content:center;
+        }
+
+        /* Links */
+        a {
+            color: #498fbe;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Visited link */
+        a:visited {
+            color: #2c5a85;
+        }
+
+        /* Hover effect */
+        a:hover {
+            color: #0b8d3f;
+            text-decoration: underline;
+        }
+
+        /* Active link (clicked) */
+        a:active {
+            color: #083d27;
+        }
+
+        /* Article styles */
+        article {
+            background: white;
+            padding: 15px;
+            box-shadow: 0 2px 2px #498fbe;
+            width: 100%;
+        }
+
+        article h2 {
+            margin-bottom: 10px;
+            color: #333;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        article p {
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        article i {
+            display: block;
+            /* necessary to allow use of margin/padding */
+            margin-bottom: 10px;
+            color: gray;
+            font-size: 0.9em;
+        }
+
+        article ul,
+        ol {
+            margin: 30px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #498fbe;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* Responsive: Two Columns on Tablets */
+        @media (min-width: 600px) {
+            article {
+                width: 48%;
+                /* Two columns with small gap */
+            }
+        }
+
+        /* Responsive: Three Columns on Desktop */
+        @media (min-width: 1024px) {
+            article {
+                width: 30%;
+                /* Three columns */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Learning Web Standards</h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>Labs 1 and 2</h2>
+            <p><i>Published on January 1, 2025</i></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet nulla et libero mollis.
+            </p>
+            <ul>
+                <li>Dolor sit amet</li>
+                <li>Liguia gravida tempor</li>
+                <li>Nisinum ultrices metus</li>
+            </ul>
+            <p>Donec bibendum, ligula id gravida tempor, nisi nunc ultricies sapien, at posuere metus.</p>
+
+            <a href="https://W3Schools.com">W3Schools.com</a>
+        </article>
+
+        <article>
+            <h2>Lab 3</h2>
+            <p><i>Published on February 5, 2025</i></p>
+            <p>Aliquam erat volutpat. Integer eget tincidunt tortor. Pellentesque habitant morbi tristique.</p>
+            <p>Donec bibendum, ligula id gravida tempor, nisi nunc ultricies sapien, at posuere metus. Suspendisse
+                potenti. Ut egestas lacus at justo molestie, vel pharetra est varius.</p>
+        </article>
+
+        <article>
+            <h2>Lab 4</h2>
+            <p><i>Published on April 15, 2025</i></p>
+            <p>Suspendisse potenti. Ut egestas lacus at justo molestie, vel pharetra est varius. Curabitur iaculis et
+                magna nec fermentum. Nulla viverra velit rhoncus bibendum maximus. Morbi venenatis elementum elit at
+                consequat. Integer ac nunc quis ipsum vestibulum venenatis at a lacus.</p>
+            <p>Praesent mi turpis, pellentesque eu pulvinar sed, lacinia et risus. Vestibulum non accumsan orci. Etiam
+                feugiat ultricies sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent
+                placerat est gravida cursus vestibulum. Proin tempus at augue eu eleifend. Orci varius natoque penatibus
+                et magnis dis parturient montes, nascetur ridiculus mus. Cras a tincidunt nulla, vel pretium turpis.</p>
+            <p>Donec auctor arcu nibh, ac vestibulum nisl ullamcorper eget. Etiam sit amet eros suscipit, vulputate
+                mauris ac, egestas neque. Suspendisse facilisis neque quis nunc mattis placerat. </p>
+                <ol>
+                    <li>Dolor sit amet</li>
+                    <li>Liguia gravida tempor</li>
+                    <li>Nisinum ultrices metus</li>
+                </ol>
+        </article>
+        <article>
+            <h2>Lab 5</h2>
+            <p><i>Published on April 15, 2025</i></p>
+            <p>Suspendisse potenti. Ut egestas lacus at justo molestie, vel pharetra est varius.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Professor</p>
+    </footer>
+
+</body>
+
+</html>

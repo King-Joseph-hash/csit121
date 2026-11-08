@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 06: Website Usability Evaluation of Dogwood Charter School</title>
+    <meta name="description" content="A usability evaluation of the Dogwood Charter School website for CSIT 121.">
+
+    <style>
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #222222;
+            background: #ffffff;
+            max-width: 44rem;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        nav {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-top: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 1.25rem;
+        }
+
+        a {
+            color: #0b4a8f;
+        }
+
+        a:focus {
+            outline: 3px solid #222222;
+            outline-offset: 2px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 0.5rem;
+            top: -4rem;
+            background: #ffffff;
+            padding: 0.5rem 1rem;
+        }
+
+        .skip-link:focus {
+            top: 0.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.25rem;
+        }
+
+        dt {
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        dd {
+            margin-left: 0;
+        }
+
+        figure {
+            margin: 1.5rem 0;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #999999;
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            margin: 3rem 0 1.5rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <h1>Website Usability Evaluation: Dogwood Charter School</h1>
+        <p>CSIT 121, Lab 06. Evaluated by [YOUR NAME] on [DATE].</p>
+    </header>
+
+    <nav aria-label="Evaluation sections">
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#screenshot">Screenshot</a></li>
+            <li><a href="#organization">Organization</a></li>
+            <li><a href="#crap">CRAP</a></li>
+            <li><a href="#accessibility">Accessibility</a></li>
+            <li><a href="#usability">Usability</a></li>
+            <li><a href="#recommendation">Recommendation</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+
+        <section id="overview" aria-labelledby="overview-heading">
+            <h2 id="overview-heading">Overview of the Website</h2>
+
+            <dl>
+                <dt>URL of the website</dt>
+                <dd><a href="https://www.dogwoodcharter.org/">https://www.dogwoodcharter.org/</a></dd>
+
+                <dt>Name of the website</dt>
+                <dd>Dogwood Charter Schools</dd>
+
+                <dt>Target audience</dt>
+                <dd>The main audience is parents and guardians in the Bethel Park, PA area who are looking for a public
+                    school for their children in kindergarten through sixth grade. The home page speaks directly to
+                    parents who want less screen time, more time in nature, and a hands-on style of learning. The
+                    enrollment banner and the "Apply Today" button show that the school wants these families to apply. A
+                    smaller audience is people interested in working at the school, since the site has a Careers page,
+                    and the Board of Trustees and Events pages serve the wider school community.</dd>
+            </dl>
+        </section>
+
+        <section id="screenshot" aria-labelledby="screenshot-heading">
+            <h2 id="screenshot-heading">Screenshot of the Website</h2>
+
+            <figure>
+                <img src="images/dogwood.png"
+                    alt="The Dogwood Charter School home page. A green banner at the top announces that K-6 enrollment has begun for the 26/27 school year with an Apply today link. Below it are the school logo, the main menu with Academics and Curriculum, Admissions, Board of Trustees, Events, About, and Contact Us, and a yellow Apply Today button. The large headline reads Less Screen Time. More Wonder.">
+                <figcaption>Screenshot of the Dogwood Charter School home page taken on 10?24/2026.</figcaption>
+            </figure>
+        </section>
+
+        <section id="organization" aria-labelledby="organization-heading">
+            <h2 id="organization-heading">How Is the Site Organized?</h2>
+            <p> Hierarchical. The site has a clear home page, and the main menu links to the major sections (Academics &
+                Curriculum, Admissions, Board of Trustees, Events, About, Contact Us). The About menu holds smaller
+                pages under it, like About DCS and Careers. It’s shallow, so most pages are one or two clicks from the
+                home page. It isn’t linear because there’s no required order to view the pages, and it isn’t random
+                because the menu gives a clear path to every section.</p>
+        </section>
+
+        <section id="crap" aria-labelledby="crap-heading">
+            <h2 id="crap-heading">Which CRAP Design Principle Does the Site Use?</h2>
+            <p>Repetition: “Apply Today” appears in the banner, the menu, and the home page, and the same dark green is
+                used in the logo, banner, and headline box.</p>
+        </section>
+
+        <section id="accessibility" aria-labelledby="accessibility-heading">
+            <h2 id="accessibility-heading">Accessibility Checker Audit Score</h2>
+            <p>The audit score from the <a href="https://www.accessibilitychecker.org/">Accessibility Checker</a> was
+                [66].</p>
+        </section>
+
+        <section id="usability" aria-labelledby="usability-heading">
+            <h2 id="usability-heading">Usability of the Site</h2>
+
+            <h3>Effectiveness</h3>
+            <p>The site helps users complete actions accurately. The task I tried was finding out how to apply to the
+                school. The "Apply today" link in the top banner, the yellow "Apply Today" button in the menu, and the
+                button on the home page all lead to the Admissions page, so I did not have to guess where to go. I also
+                looked for the school's address, and it is listed at the bottom of the home page.</p>
+
+            <h3>Efficiency</h3>
+            <p>Users can perform tasks quickly. It took one click from the home page to reach the Admissions page. The
+                address is on the home page, so it takes no clicks, and the Contact Us page is one click away from the
+                menu. The menu has only seven items, so it is easy to scan.</p>
+
+            <h3>Engagement</h3>
+            <p>The site is pleasant to use and fits an elementary school. The dark green color, the photo of an open
+                book in the grass, and the headline "Less Screen Time. More Wonder." match the school's focus on nature
+                and hands-on learning. The text is large and easy to read, and the icons in "The Dogwood Charter School
+                Difference" section are friendly and simple. The site speaks to parents, who are the main audience, in
+                plain language without being too formal.</p>
+        </section>
+
+        <section id="recommendation" aria-labelledby="recommendation-heading">
+            <h2 id="recommendation-heading">Recommendation to Improve the Website</h2>
+            <p>One way to improve the website is to move "Board of Trustees" under the "About" menu. Right now the main
+                menu has seven items, and Board of Trustees sits at the same level as Admissions and Academics &amp;
+                Curriculum. Parents care most about admissions, academics, and events, while the board is more useful to
+                the school community. Moving it under "About" would shorten the main menu and make it easier to scan. It
+                would also follow the module's advice to avoid overwhelming users with too many choices at once.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Lab 06. Website evaluated: <a href="https://www.dogwoodcharter.org/">Dogwood Charter
+                School</a>.</p>
+    </footer>
+</body>
+
+</html>

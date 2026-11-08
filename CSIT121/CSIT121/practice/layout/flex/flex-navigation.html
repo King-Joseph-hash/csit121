@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flex Layout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        * { box-sizing: border-box;}  /* nav will overflow the wrapper at smaller sizes due to padding  without this */
+        body {
+            background-color: #6c7a86;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container for content */
+        #wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin: 30px auto;
+            background-color: #EAEAEA;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background-color: #498fbe;
+            padding: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            color: white;
+        }
+
+        /* Flex container for content */
+        #content {
+            display: flex;
+            flex: 1; /* Makes sure content grows */
+            width: 100%;
+        }
+
+        /* Navigation */
+        nav {
+            width: 200px; /* More space for nav links */
+            flex-shrink: 0; /* Prevents nav from shrinking */
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        /* Main Content */
+        main {
+            flex-grow: 1; /* Ensures it takes all available space */
+            padding: 20px;
+            background-color: white;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-style: italic;
+            background-color: #498fbe;
+            padding: 10px;
+            color: white;
+        }
+
+        /* Links */
+        a {
+            display: block;
+            padding: 5px 0;
+            color: #498fbe;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        a:hover {
+            color: #0b8d3f;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #content {
+                flex-direction: column; /* Stack nav and main vertically */
+            }
+
+            nav {
+                width: 100%; /* Full width on small screens */
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Flexbox Example</h1>
+        </header>
+        <div id="content">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="page1.html">Page 1</a>
+                <a href="page2.html">Page 2</a>
+            </nav>
+            <main>
+                <h2>Page Heading</h2>
+                <p>This is a sentence. This is a sentence. This is a sentence. This is a sentence.
+                    This is a sentence. This is a sentence. This is a sentence. This is a sentence.
+                    This is a sentence. This is a sentence. This is a sentence. This is a sentence.
+                    This is a sentence. This is a sentence.
+                </p>
+            </main>
+        </div>
+        <footer>Copyright &copy; 2025</footer>
+    </div>
+</body>
+
+</html>

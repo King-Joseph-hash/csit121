@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Casita Sedona</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-image: url(header.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        h1 {
+            text-align: center;
+            color: #F7F1E3;
+            font-size: 300%;
+            text-shadow: 10px 10px 10px #000000;
+        }
+
+        h2 {
+            color: #2c2c54;
+        }
+
+        /* Flex container */
+        #wrapper {
+            display: flex;
+            flex-direction: column;
+            background-color: #F7F1E3;
+            color: #0B8781;
+            min-height: 100vh;
+        }
+
+        nav ul {
+            padding-left: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav li {
+            width: 20%;
+            min-width: 6em;
+            font-size: 110%;
+            text-align: center;
+            background-color: #003C58;
+            margin: .5em;
+            padding: .5em;
+        }
+
+        nav a {
+            text-decoration: none;
+        }
+
+        nav a:link {
+            color: #F7F1E3;
+        }
+
+        nav a:visited {
+            color: #B9EDF0;
+        }
+
+        nav a:hover {
+            color: #FFFFFF;
+        }
+
+        main {
+            flex-grow: 1; 
+            padding: 1em;
+        }
+
+        aside {
+            display: none; /* Hidden on mobile */
+            padding: 1em;
+        }
+
+        footer {
+            text-align: center;
+            font-style: italic;
+            padding: 1em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Tablet Layout (38em / 608px and up) */
+        @media (min-width: 38em) {
+            #wrapper {
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: stretch;
+            }
+
+            header {
+                width: 100%;
+            }
+
+            nav {
+                width: 100%;
+            }
+
+            main {
+                flex: 2;
+                order: 2;
+            }
+
+            aside {
+                display: block;
+                flex: 1;
+                order: 3;
+            }
+
+            footer {
+                width: 100%;
+                order: 4;
+            }
+        }
+
+        /* Desktop Layout (65em / 1040px and up) */
+        @media (min-width: 65em) {
+            #wrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between; /* Distributes space evenly */
+                gap: 20px;
+            }
+
+            nav {
+                width: 150px;
+                flex-shrink: 0; /* prevents it shrinking */
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            main {
+                flex: 1; /* Takes up remaining space */
+                max-width: 70%; /* Ensures a max of 70% */
+            }
+
+            aside {
+                flex: 0 0 30%; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Desert Bed &amp; Breakfast</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="specials.html">Specials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Located in the Heart of the Desert</h2>
+            <p>At Desert Bed &amp; Breakfast you&rsquo;ll be close to art galleries, shops, restaurants, hiking trails,
+                and tours.</p>
+            <h2>Luxurious Rooms </h2>
+            <p>Stay in a well-appointed room at Desert B&B with your own fireplace, king-size bed, balcony overlooking
+                the red rocks.</p>
+            <h2>Hearty Breakfast</h2>
+            <p>Each day begins with a hearty breakfast that includes your choice of Belgian waffles, pumpkin French
+                toast, or quiche.</p>
+            <h2>About Your Hosts</h2>
+            <p>Your hosts are long-time Desert residents who love to share their knowledge of the area with their
+                guests.</p>
+        </main>
+        <aside>
+            <img src="pools.jpg" alt="Pools of water in the rock">
+            <h2>Guided Hikes</h2>
+            <p>We offer a guided hike each week for guests. Explore the areas along our famous trails.</p>
+        </aside>
+        <footer>Copyright &copy; 2024</footer>
+    </div>
+</body>
+
+</html>

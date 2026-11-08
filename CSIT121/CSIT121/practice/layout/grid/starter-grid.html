@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Base styles (Mobile First) */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
+        }
+
+        .grid-container {
+            display: grid;
+            min-height: 80vh; /* ensures container uses at least  80% of the vertical height of the viewport */
+            grid-template-areas:
+                "header"
+                "main"
+                "sidebar"
+                "footer";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr auto auto; /* lets main take up any leftover vertical height */
+            gap: 5px;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #520b4c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        main {
+            grid-area: main;
+            background-color: #ddd;
+            padding: 15px;
+        }
+
+        aside {
+            grid-area: sidebar;
+            background-color: #f4f4f4;
+            padding: 15px;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Tablet Layout (≥ 600px) */
+        @media (min-width: 600px) {
+            .grid-container {
+                grid-template-areas:
+                    "header header"
+                    "main sidebar"
+                    "footer footer";
+                grid-template-columns: 1fr 250px;
+                grid-template-rows: auto 1fr auto;
+            }
+        }
+
+        /* Laptop Layout (≥ 1024px) */
+        @media (min-width: 1024px) {
+            .grid-container {
+                grid-template-areas:
+                    "header header"
+                    "sidebar main"
+                    "footer footer";
+                grid-template-columns: 200px 1fr;
+                grid-template-rows: auto 1fr auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>Header</header>
+        <aside>Sidebar</aside>
+        <main>Main Content</main>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>

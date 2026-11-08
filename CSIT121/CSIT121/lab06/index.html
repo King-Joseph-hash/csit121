@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Webpage</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Lab 06 layout structure written with help from Claude (AI), using my CSIT 121 module notes
+       and the Lab 5 video. The wrapper, nav anchors, and responsive layout are explained in styles.css -->
+  <div id="wrapper">
+    <header>
+      <h1 id="primary-header">Learning Web Standards</h1>
+      <nav>
+        <ul>
+          <li><a href="#post-labs-1-2">Labs 1 &amp; 2</a></li>
+          <li><a href="#post-css-basics">CSS Basics</a></li>
+          <li><a href="#post-responsive-design">Responsive Design</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article id="post-labs-1-2">
+        <h2>Labs 1 &amp; 2</h2>
+        <p><i>Published on September 8 2026 by Joseph Gagar</i></p>
+        <p>This is not my first web page, however due to
+          me not consistently improving my HTML mastery, this webpage will still look like that of a pure beginner.
+          This whole process was not that complicated at all thankfully.
+        </p>
+        <h3>What I learned</h3>
+        <ol class="lists">
+          <li>naming your files with lowercase letters</li>
+          <li>void elements </li>
+          <li>how to generate a boilerplate in VS code</li>
+        </ol>
+        <p>Learning about URLs, publishing websites on github, and comments was another exciting step.<br> I learned a
+          lot
+          from:</p>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=9gbLIYqncN4&amp;t=5117s" target="_blank">this page</a></li>
+          <li><a href="https://www.youtube.com/watch?v=iik25wqIuFo" target="_blank">and this page</a></li>
+        </ul>
+      </article>
+      <article id="post-css-basics">
+        <h3>What I Learned (CSS Basics)</h3>
+        <ol class="lists">
+          <li>how to link an external stylesheet to my html files</li>
+          <li>the format of a basic CSS rule</li>
+          <li>how class and ID selectors work</li>
+        </ol>
+        <p>Learning about descendant selectors, the different types of CSS, and the advantages/disadvantages of all the
+          types of all the types of CSS was really eye opening.<br>I learned alot from: </p>
+        <ul>
+          <li><a href="https://opencontent.ccbcmd.edu/csit121/chapter/self-check-questions-4/" target="_blank">this
+              page</a></li>
+          <li><a href="https://www.youtube.com/watch?v=OXGznpKZ_sA" target="_blank">and this page</a></li>
+        </ul>
+      </article>
+      <article id="post-responsive-design">
+        <h3>What I Learned (Responsive Design and Best Practices)</h3>
+        <ol class="lists">
+          <li>how display: flex on a parent element lays out its children in a row or a column</li>
+          <li>how a media query changes the layout only on bigger screens</li>
+          <li>how link anchors let a menu jump to a specific post on the page</li>
+        </ol>
+        <p>The biggest design practice I learned is to build for the phone first and then add a media query for bigger
+          screens, because it is easier to add changes than to undo a desktop design. I also used a wrapper to keep the
+          page from stretching too wide, dark text on light cards so it is easy to read, and a menu at the top so people
+          can jump straight to the post they want. The viewport meta tag matters too, since without it a phone shows a
+          shrunken desktop page. I wrote this layout with help from my course notes, and the
+          Lab 5 video, and I tested it by resizing my browser.<br>I learned a lot from: </p>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=UpLtRQ0bAYU" target="_blank">the CSIT 121 Lab 05 info video</a>
+          </li>
+          <li><a href="https://opencontent.ccbcmd.edu/csit121/" target="_blank">the CSIT 121 course textbook</a></li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      <p>&copy; 2026 Joseph Gagar. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+
+</html>
