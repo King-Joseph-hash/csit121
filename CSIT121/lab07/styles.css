@@ -1,0 +1,115 @@
+body {
+  font-family: Verdana, Arial, sans-serif;
+  margin: 0;
+  background-color: whitesmoke;
+  color: black;
+}
+
+nav {
+  background-color: indigo;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: springgreen;
+  color: indigo;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-align: center;
+}
+
+caption {
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  height: 110px;
+}
+
+thead th {
+  background-color: gainsboro;
+  height: auto;
+}
+
+/* Images fit inside their cell */
+td img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* Tier colors */
+.tier-s { background-color: mediumpurple; }
+.tier-a { background-color: mediumturquoise; }
+.tier-b { background-color: lightgreen; }
+.tier-c { background-color: orange; }
+.tier-f { background-color: lightcoral; }
+
+/* Form */
+.field {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-right: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  display: block;
+  margin-top: 5px;
+}
+
+fieldset {
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: indigo;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: springgreen;
+  color: indigo;
+}
