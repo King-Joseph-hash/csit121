@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example: Fade In</title>
+  <style>
+
+    body { font-family: Arial, Helvetica, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.5; color: #1f1f1f; }
+    h1 { color: #0a4054; }
+    code { background: #eee; padding: 2px 5px; }
+    .card { background: #daeceb; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      animation: fade-in 1s ease-out;   /* the name here must match the @keyframes name */
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Example: Fade In</h1>
+  <p>Reload the page to see the card fade in.</p>
+
+  <div class="card">
+    <h2>About Me</h2>
+    <p>This card fades in and slides up when the page loads.</p>
+  </div>
+</body>
+</html>

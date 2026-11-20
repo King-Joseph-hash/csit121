@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example: Change Text</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.5;
+      color: #1f1f1f;
+    }
+
+    h1 {
+      color: #0a4054;
+    }
+
+    code {
+      background: #eee;
+      padding: 2px 5px;
+    }
+
+    button {
+      background: #0a4054;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    #message {
+      background: #fdf1e6;
+      padding: 15px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Example: Change Text</h1>
+
+
+  <p id="message">Click the button to see a fun fact.</p>
+  <button id="fact-btn">Show fact</button>
+
+
+  <script>
+    // FIND the paragraph and the button
+    const message = document.getElementById('message');
+    const factBtn = document.getElementById('fact-btn');
+
+    // LISTEN for a click, then CHANGE the paragraph's text
+    factBtn.addEventListener('click', function () {
+      message.textContent = 'The first website went live in 1991.';   // edit the new text here
+    });
+  </script>
+</body>
+
+</html>

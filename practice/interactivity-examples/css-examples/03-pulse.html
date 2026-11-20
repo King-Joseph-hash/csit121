@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example: Pulse</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.5; color: #1f1f1f; }
+    h1 { color: #0a4054; }
+    code { background: #eee; padding: 2px 5px; }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to   { transform: scale(1.08); }
+    }
+
+    .pulse {
+      display: inline-block;
+      background: #f9aa19;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      animation: pulse 1s ease-in-out 0s infinite alternate;
+      /* name | duration | timing | delay | repeat forever | go back and forth */
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Example: Pulse</h1>
+  <p>Use this sparingly: one pulsing element per page is plenty.</p>
+
+  <p class="pulse">New lab posted!</p>
+  
+</body>
+</html>

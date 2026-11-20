@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        main {
+            background-color: lightsalmon;
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+        }
+
+        div {
+            background-color: lightblue;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            body {
+                flex-direction: column;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="1">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at lorem ligula. Proin in bibendum mauris.
+                Aenean in libero eget ante vulputate tristique ac et felis. Pellentesque tempus nisi vel libero
+                imperdiet,
+                eget varius nisi maximus. Duis sapien nibh, consectetur vitae turpis at, bibendum mattis neque. Quisque
+                volutpat urna eget magna fringilla egestas. Vivamus sit amet neque at felis lacinia rhoncus non at
+                risus.</p>
+
+            <p>Etiam auctor nisi sapien, gravida tincidunt nulla ultricies ut. In hac habitasse platea dictumst. Fusce
+                augue quam, vulputate nec sapien a, commodo aliquam nulla. Vivamus elementum magna id velit elementum
+                accumsan. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Phasellus
+                ornare ex vitae erat gravida finibus. Nunc vitae sollicitudin sem. Nam ac lacinia sem, vitae tincidunt
+                sem.
+                Donec bibendum purus eu nisl tincidunt, eget posuere dui molestie. Etiam aliquet magna a lacus volutpat,
+                eget fringilla urna laoreet. Fusce eu nulla massa. Nullam pulvinar dui ac sem aliquam mattis quis et
+                elit.
+                Nam non efficitur felis, id efficitur sapien. Aliquam erat volutpat. In commodo dolor viverra tellus
+                gravida, sit amet fermentum enim mollis. </p>
+        </div>
+
+        <div id="2">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at lorem ligula. Proin in bibendum mauris.
+                Aenean in libero eget ante vulputate tristique ac et felis. Pellentesque tempus nisi vel libero
+                imperdiet,
+                eget varius nisi maximus. Duis sapien nibh, consectetur vitae turpis at, bibendum mattis neque. Quisque
+                volutpat urna eget magna fringilla egestas. Vivamus sit amet neque at felis lacinia rhoncus non at
+                risus.</p>
+
+            <p>Etiam auctor nisi sapien, gravida tincidunt nulla ultricies ut. In hac habitasse platea dictumst. Fusce
+                augue quam, vulputate nec sapien a, commodo aliquam nulla. Vivamus elementum magna id velit elementum
+                accumsan. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Phasellus
+                ornare ex vitae erat gravida finibus. Nunc vitae sollicitudin sem. Nam ac lacinia sem, vitae tincidunt
+                sem.
+                Donec bibendum purus eu nisl tincidunt, eget posuere dui molestie. Etiam aliquet magna a lacus volutpat,
+                eget fringilla urna laoreet. Fusce eu nulla massa. Nullam pulvinar dui ac sem aliquam mattis quis et
+                elit.
+                Nam non efficitur felis, id efficitur sapien. Aliquam erat volutpat. In commodo dolor viverra tellus
+                gravida, sit amet fermentum enim mollis. </p>
+        </div>
+
+        <div id="3">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at lorem ligula. Proin in bibendum mauris.
+                Aenean in libero eget ante vulputate tristique ac et felis. Pellentesque tempus nisi vel libero
+                imperdiet,
+                eget varius nisi maximus. Duis sapien nibh, consectetur vitae turpis at, bibendum mattis neque. Quisque
+                volutpat urna eget magna fringilla egestas. Vivamus sit amet neque at felis lacinia rhoncus non at
+                risus.</p>
+
+            <p>Etiam auctor nisi sapien, gravida tincidunt nulla ultricies ut. In hac habitasse platea dictumst. Fusce
+                augue quam, vulputate nec sapien a, commodo aliquam nulla. Vivamus elementum magna id velit elementum
+                accumsan. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Phasellus
+                ornare ex vitae erat gravida finibus. Nunc vitae sollicitudin sem. Nam ac lacinia sem, vitae tincidunt
+                sem.
+                Donec bibendum purus eu nisl tincidunt, eget posuere dui molestie. Etiam aliquet magna a lacus volutpat,
+                eget fringilla urna laoreet. Fusce eu nulla massa. Nullam pulvinar dui ac sem aliquam mattis quis et
+                elit.
+                Nam non efficitur felis, id efficitur sapien. Aliquam erat volutpat. In commodo dolor viverra tellus
+                gravida, sit amet fermentum enim mollis. </p>
+        </div>
+
+        <div id="4">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at lorem ligula. Proin in bibendum mauris.
+                Aenean in libero eget ante vulputate tristique ac et felis. Pellentesque tempus nisi vel libero
+                imperdiet,
+                eget varius nisi maximus. Duis sapien nibh, consectetur vitae turpis at, bibendum mattis neque. Quisque
+                volutpat urna eget magna fringilla egestas. Vivamus sit amet neque at felis lacinia rhoncus non at
+                risus.</p>
+
+            <p>Etiam auctor nisi sapien, gravida tincidunt nulla ultricies ut. In hac habitasse platea dictumst. Fusce
+                augue quam, vulputate nec sapien a, commodo aliquam nulla. Vivamus elementum magna id velit elementum
+                accumsan. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Phasellus
+                ornare ex vitae erat gravida finibus. Nunc vitae sollicitudin sem. Nam ac lacinia sem, vitae tincidunt
+                sem.
+                Donec bibendum purus eu nisl tincidunt, eget posuere dui molestie. Etiam aliquet magna a lacus volutpat,
+                eget fringilla urna laoreet. Fusce eu nulla massa. Nullam pulvinar dui ac sem aliquam mattis quis et
+                elit.
+                Nam non efficitur felis, id efficitur sapien. Aliquam erat volutpat. In commodo dolor viverra tellus
+                gravida, sit amet fermentum enim mollis. </p>
+        </div>
+        <div id="5">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at lorem ligula. Proin in bibendum mauris.
+                Aenean in libero eget ante vulputate tristique ac et felis. Pellentesque tempus nisi vel libero
+                imperdiet,
+                eget varius nisi maximus. Duis sapien nibh, consectetur vitae turpis at, bibendum mattis neque. Quisque
+                volutpat urna eget magna fringilla egestas. Vivamus sit amet neque at felis lacinia rhoncus non at
+                risus.</p>
+
+            <p>Etiam auctor nisi sapien, gravida tincidunt nulla ultricies ut. In hac habitasse platea dictumst. Fusce
+                augue quam, vulputate nec sapien a, commodo aliquam nulla. Vivamus elementum magna id velit elementum
+                accumsan. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Phasellus
+                ornare ex vitae erat gravida finibus. Nunc vitae sollicitudin sem. Nam ac lacinia sem, vitae tincidunt
+                sem.
+                Donec bibendum purus eu nisl tincidunt, eget posuere dui molestie. Etiam aliquet magna a lacus volutpat,
+                eget fringilla urna laoreet. Fusce eu nulla massa. Nullam pulvinar dui ac sem aliquam mattis quis et
+                elit.
+                Nam non efficitur felis, id efficitur sapien. Aliquam erat volutpat. In commodo dolor viverra tellus
+                gravida, sit amet fermentum enim mollis. </p>
+        </div>
+    </main>
+</body>
+
+</html>
