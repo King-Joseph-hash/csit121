@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example: Spinner</title>
+  <style>
+
+    body { font-family: Arial, Helvetica, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.5; color: #1f1f1f; }
+    h1 { color: #0a4054; }
+    code { background: #eee; padding: 2px 5px; }
+
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 6px solid #daeceb;
+      border-top-color: #0a4054;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+  </style>
+</head>
+<body>
+  <h1>Example: Spinner</h1>
+  <p>A loading spinner made only with CSS. Try changing <code>1s</code> to <code>3s</code>.</p>
+
+  <div class="spinner"></div>
+</body>
+</html>

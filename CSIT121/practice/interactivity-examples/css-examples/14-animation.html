@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Demo: bounce 2s ease-in-out 0.5s infinite alternate</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f7fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .demo-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+
+        .animation-display {
+            min-height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px dashed #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .element {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            
+            /* The animation being demonstrated */
+            animation: bounce 2s ease-in-out 0.5s infinite alternate;
+        }
+
+        /* The keyframes for the bounce animation */
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100px);
+            }
+        }
+
+        .code-explanation {
+            margin-top: 20px;
+            background-color: #f6f8fa;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 20px;
+        }
+
+        .animation-breakdown {
+            background-color: #ebf5fb;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .paused {
+            animation-play-state: paused;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Animation Demo: <code>animation: bounce 2s ease-in-out 0.5s infinite alternate;</code></h1>
+
+    <div class="demo-container">
+        <div class="animation-display">
+            <div class="element" id="animatedElement">Element</div>
+        </div>
+
+        <div class="controls">
+            <button id="pauseBtn">Pause Animation</button>
+            <button id="resetBtn">Reset Animation</button>
+        </div>
+
+        <div class="code-explanation">
+            <h2>The Animation Code:</h2>
+            <pre><code>.element {
+    animation: bounce 2s ease-in-out 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}</code></pre>
+        </div>
+
+        <div class="animation-breakdown">
+            <h2>Breaking Down the Animation Shorthand:</h2>
+            
+            <table>
+                <tr>
+                    <th>Property</th>
+                    <th>Value</th>
+                    <th>Explanation</th>
+                </tr>
+                <tr>
+                    <td>animation-name</td>
+                    <td>bounce</td>
+                    <td>The name of the keyframe animation defined with @keyframes</td>
+                </tr>
+                <tr>
+                    <td>animation-duration</td>
+                    <td>2s</td>
+                    <td>The animation takes 2 seconds to complete one cycle</td>
+                </tr>
+                <tr>
+                    <td>animation-timing-function</td>
+                    <td>ease-in-out</td>
+                    <td>Animation starts slowly, speeds up in the middle, then slows down at the end</td>
+                </tr>
+                <tr>
+                    <td>animation-delay</td>
+                    <td>0.5s</td>
+                    <td>Animation waits 0.5 seconds before starting</td>
+                </tr>
+                <tr>
+                    <td>animation-iteration-count</td>
+                    <td>infinite</td>
+                    <td>Animation repeats forever</td>
+                </tr>
+                <tr>
+                    <td>animation-direction</td>
+                    <td>alternate</td>
+                    <td>Animation plays forward then backward, creating a bouncing effect</td>
+                </tr>
+            </table>
+
+            <h3>About the Bounce Animation:</h3>
+            <p>This animation moves the element up 100px from its original position and then back down due to the "alternate" direction property. The "ease-in-out" timing function makes the movement appear more natural, like a bounce with gradual acceleration and deceleration.</p>
+            
+            <p>The "alternate" direction makes the animation play forwards then backwards, creating a continuous bouncing effect, while "infinite" ensures it keeps repeating.</p>
+        </div>
+    </div>
+
+    <script>
+        const element = document.getElementById('animatedElement');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        
+        pauseBtn.addEventListener('click', function() {
+            if (element.classList.contains('paused')) {
+                element.classList.remove('paused');
+                pauseBtn.textContent = 'Pause Animation';
+            } else {
+                element.classList.add('paused');
+                pauseBtn.textContent = 'Resume Animation';
+            }
+        });
+        
+        resetBtn.addEventListener('click', function() {
+            // Remove and reapply the animation to reset it
+            element.style.animation = 'none';
+            // Force reflow
+            void element.offsetWidth;
+            element.style.animation = 'bounce 2s ease-in-out 0.5s infinite alternate';
+            
+            // Make sure it's not paused
+            element.classList.remove('paused');
+            pauseBtn.textContent = 'Pause Animation';
+        });
+    </script>
+</body>
+</html>
