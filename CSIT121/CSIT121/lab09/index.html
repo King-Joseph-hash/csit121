@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,7 @@
         }
 
         tr:nth-child(even) {
-            background-color: #7ce2af;
+            background-color: #7ce2af
         }
 
         th {
@@ -38,6 +39,7 @@
             border-radius: 30px;
             font-size: 30px;
             width: 500px;
+
         }
 
         .button:hover {
@@ -46,24 +48,29 @@
         }
     </style>
 
-    <!-- JavaScript -->
+    <!--JavaScript-->
     <script>
+
+        // MODIFICATION: Added a variable to keep track of whether the table is visible or hidden.
         let tableVisible = false;
 
+        // MODIFICATION: Added a function to toggle the employee table on and off.
         function toggleEmployeeDetails() {
 
-            // If the table is currently visible, hide it
+            // MODIFICATION: If the table is visible, hide it when the button is clicked.
             if (tableVisible) {
-                document.getElementById("employeeTable").innerHTML = "";
-                document.getElementById("employeeTable").style.display = "none";
+                document.getElementById("id").innerHTML = "";
+                document.getElementById("id").style.display = "none";
 
+                // MODIFICATION: Change the button text back when the table is hidden.
                 document.getElementById("toggleButton").innerHTML =
                     "Get Employees Details";
 
+                // MODIFICATION: Update the variable to indicate that the table is hidden.
                 tableVisible = false;
             }
 
-            // If the table is currently hidden, load and display it
+            // MODIFICATION: If the table is hidden, load the XML data when the button is clicked.
             else {
                 loadXMLDoc();
             }
@@ -71,24 +78,26 @@
 
         function loadXMLDoc() {
             let xmlhttp = new XMLHttpRequest();
-
             xmlhttp.onreadystatechange = function () {
 
-                // Request finished and response is ready
-                // and Status is "OK"
+                // Request finished and response
+                // is ready and Status is "OK"
                 if (this.readyState == 4 && this.status == 200) {
                     empDetails(this);
 
-                    document.getElementById("employeeTable").style.display = "table";
+                    // MODIFICATION: Display the table after the XML data has loaded.
+                    document.getElementById("id").style.display = "table";
 
+                    // MODIFICATION: Change the button text when the table is displayed.
                     document.getElementById("toggleButton").innerHTML =
                         "Close Employees Details";
 
+                    // MODIFICATION: Update the variable to indicate that the table is visible.
                     tableVisible = true;
                 }
             };
 
-            // employee.xml is the external XML file
+            // employee.xml is the external xml file
             xmlhttp.open("GET", "employee.xml", true);
             xmlhttp.send();
         }
@@ -96,13 +105,11 @@
         function empDetails(xml) {
             let i;
             let xmlDoc = xml.responseXML;
-
             let table =
                 `<tr><th>Firstname</th><th>Lastname</th>
                     <th>Title</th><th>Division</th>
                     <th>Building</th><th>Room</th>
                 </tr>`;
-
             let x = xmlDoc.getElementsByTagName("employee");
 
             // Start to fetch the data by using TagName
@@ -122,25 +129,24 @@
                         .childNodes[0].nodeValue + "</td></tr>";
             }
 
-            // Print the XML data in table form
-            document.getElementById("employeeTable").innerHTML = table;
+            // Print the xml data in table form
+            document.getElementById("id").innerHTML = table;
         }
     </script>
 </head>
 
 <body>
 
-    <div style="text-align: center;">
-        <button type="button" class="button"
-            id="toggleButton"
-            onclick="toggleEmployeeDetails()">
+        <!-- MODIFICATION: Added an ID to the button so JavaScript can change its text. -->
+        <!-- MODIFICATION: Changed onclick to call the toggle function instead of loadXMLDoc directly. -->
+        <button type="button" class="button" id="toggleButton" onclick="toggleEmployeeDetails()">
             Get Employees Details
         </button>
-    </div>
 
     <br><br>
 
-    <table id="employeeTable" style="display: none;"></table>
-
+    <!-- MODIFICATION: Added display:none so the table is hidden when the page first loads. -->
+    <table id="id" style="display: none;"></table>
 </body>
+
 </html>
